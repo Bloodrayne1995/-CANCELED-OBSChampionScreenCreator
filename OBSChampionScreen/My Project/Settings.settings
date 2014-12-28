@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="imgPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="imageFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PNG</Value>
+    </Setting>
+    <Setting Name="hintergrundbild" Type="System.String" Scope="User">
+      <Value Profile="(Default)">./Resources/morgana_vs_ahri_2.jpg</Value>
+    </Setting>
+    <Setting Name="teamData" Type="System.String" Scope="User">
+      <Value Profile="(Default)">./Resources/teams.xml</Value>
+    </Setting>
+    <Setting Name="errorMessages" Type="System.String" Scope="User">
+      <Value Profile="(Default)">./</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
