@@ -7,6 +7,8 @@ Public Class ChampionSelector
     Private selectedChamp As String = ""
     Private hasSelected As Boolean = False
     Private alreadySelectedChamps As New List(Of String)
+    Public OVERRIDE_MAIN_MODE As Boolean = False
+
 
     Public Sub New()
 
@@ -43,15 +45,21 @@ Public Class ChampionSelector
     Private Sub lstChampions_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles lstChampions.MouseDoubleClick
         If hasSelected = True Or Not selectedChamp = "" Then
             meineForm.setzeChampion(selectedChamp)
-            If meineForm.modus = 0 Then
+            If Not OVERRIDE_MAIN_MODE Then
+                If meineForm.modus = 0 Then
+                    lstChampions.Items.RemoveByKey(selectedChamp)
+                    alreadySelectedChamps.Add(selectedChamp)
+                Else
+                    If alreadySelectedChamps.Contains(selectedChamp) Then
+                        lstChampions.Items.RemoveByKey(selectedChamp)
+                    Else
+                        alreadySelectedChamps.Add(selectedChamp)
+                    End If
+
+                End If
+            Else
                 lstChampions.Items.RemoveByKey(selectedChamp)
                 alreadySelectedChamps.Add(selectedChamp)
-            Else
-                If alreadySelectedChamps.Contains(selectedChamp) Then
-                    lstChampions.Items.RemoveByKey(selectedChamp)
-                Else
-                    alreadySelectedChamps.Add(selectedChamp)
-                End If
             End If
             hasSelected = False
         End If
@@ -71,5 +79,7 @@ Public Class ChampionSelector
     End Sub
 
 
-
+    Public Sub removeChampionByName(chdName As String)
+        lstChampions.Items.RemoveByKey(chdName)
+    End Sub
 End Class

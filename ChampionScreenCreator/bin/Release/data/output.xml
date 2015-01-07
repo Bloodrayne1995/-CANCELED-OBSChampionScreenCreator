@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<output>
+  <settings>
+    <setting name="showTeamLogos" value="false" />
+    <setting name="showTeamNames" value="false" />
+    <setting name="showPlayerNames" value="false" />
+    <setting name="showChampionNames" value="true" />
+    <setting name="showSquareIcons" value="false" />
+    <setting name="showBanner" value="true" />
+  </settings>
+  <mainPanel>
+    <team name="blue">
+      <bans>
+        <ban row="0" x="0" y ="0" />
+        <ban row="1" x="0" y ="0" />
+        <ban row="2" x="0" y ="0" />
+      </bans>
+      <player role="top">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="jungle">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="mid">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="adc">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="support">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+    </team>
+    <team name="red">
+      <bans>
+        <ban row="0" x="0" y ="0" />
+        <ban row="1" x="0" y ="0" />
+        <ban row="2" x="0" y ="0" />
+      </bans>
+      <player role="top">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="jungle">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="mid">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="adc">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+      <player role="support">
+        <banner>
+          <location x="0" y="0" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+        </square>
+      </player>
+    </team>
+  </mainPanel>
+  
+</output>

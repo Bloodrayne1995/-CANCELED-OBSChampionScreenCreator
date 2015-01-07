@@ -77,6 +77,12 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Ban.vb" />
+    <Compile Include="BanPanel.Designer.vb">
+      <DependentUpon>BanPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BanPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ChampionData.vb" />
     <Compile Include="ChampionSelector.Designer.vb">
       <DependentUpon>ChampionSelector.vb</DependentUpon>
@@ -121,6 +127,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BanPanel.resx">
+      <DependentUpon>BanPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChampionSelector.resx">
       <DependentUpon>ChampionSelector.vb</DependentUpon>
     </EmbeddedResource>

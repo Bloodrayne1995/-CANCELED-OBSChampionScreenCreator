@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<regions>
+	<region name="EUW">
+		<teams>
+			<team name="Fnatic">
+        <logo src=".\Resources\teams\euw\fnatic.png" />
+				<top name="SOAZ" />
+				<jng name="Cyanide" />
+				<mid name="xPeke" />
+				<adc name="Rekkles" />
+				<sup name="Yellowstar" />
+			</team>
+			<team name="Alliance">
+        <logo src=".\Resources\teams\euw\alliance.png" />
+        <top name="Wickd" />
+				<jng name="Shook" />
+				<mid name="Froggen" />
+				<adc name="Tabzz" />
+				<sup name="Nyph" />
+			</team>
+			<team name="SK Gaming">
+        <logo src=".\Resources\teams\euw\skgaming.png" />
+        <top name="Fredy112" />
+				<jng name="Svenskeren" />
+				<mid name="Jesiz" />
+				<adc name="CandyPanda" />
+				<sup name="nRated" />
+			</team>
+		</teams>
+	</region>
+	<region name="NA">
+		<teams>
+			<team name="Cloud9">
+        <logo src=".\Resources\teams\na\cloud9.png" />
+				<top name="Balls" />
+				<jng name="Meteos" />
+				<mid name="Hai" />
+				<adc name="Sneaky" />
+				<sup name="LemonNation" />
+			</team>
+			<team name="Team SoloMid">
+        <logo src=".\Resources\teams\na\tsm.png" />
+				<top name="Dyrus" />
+				<jng name="Amazing" />
+				<mid name="Bjergsen" />
+				<adc name="WildTurtle" />
+				<sup name="Lustboy" />
+			</team>
+			<team name="LMQ">
+        <logo src=".\Resources\teams\na\lmq.png" />
+				<top name="ackerman" />
+				<jng name="NoName" />
+				<mid name="XiaoWeiXiao" />
+				<adc name="Vasilii" />
+				<sup name="Mor" />
+			</team>
+		</teams>
+	</region>
+</regions>
+	

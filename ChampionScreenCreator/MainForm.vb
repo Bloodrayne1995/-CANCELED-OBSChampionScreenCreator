@@ -2,6 +2,8 @@
 
     Public memory As MemoryManagement
     Public champSelector As ChampionSelector
+    Public banSelector As ChampionSelector
+
     Private firstRun As Integer = 1
     Private selectedSlot As PictureBox = Nothing
     Public modus As Integer = 0
@@ -9,6 +11,10 @@
 
     Private team_blau As TeamPanel
     Private team_rot As TeamPanel
+    Private ban_blau As BanPanel
+    Private ban_rot As BanPanel
+
+
     Private _selectedTeam As String = ""
 
     Public Sub New()
@@ -24,6 +30,11 @@
         champSelector = New ChampionSelector
         champSelector.Dock = DockStyle.Fill
         SplitContainer1.Panel1.Controls.Add(champSelector)
+
+        banSelector = New ChampionSelector
+        banSelector.OVERRIDE_MAIN_MODE = True
+        banSelector.Dock = DockStyle.Fill
+
 
         declareHandlers()
 
@@ -45,6 +56,22 @@
         AddHandler team_rot.ChampionPanelSelected, AddressOf wennTeamPanelGesetzt
     End Sub
 
+    Private Sub ladeBanPanels()
+        ban_blau = New BanPanel
+        ban_blau.lade(True)
+        ban_blau.Dock = DockStyle.Fill
+        grpBlauBanns.Controls.Add(ban_blau)
+        AddHandler ban_blau.Panel_OnClick, AddressOf wennTeamPanelGesetzt
+
+
+        ban_rot = New BanPanel("rot")
+        ban_rot.lade(True)
+        ban_rot.Dock = DockStyle.Fill
+        grpRotBanns.Controls.Add(ban_rot)
+        AddHandler ban_rot.Panel_OnClick, AddressOf wennTeamPanelGesetzt
+
+    End Sub
+
     Private Sub declareHandlers()
 
     End Sub
@@ -52,16 +79,28 @@
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         champSelector.lade(Me)
+        banSelector.lade(Me)
         ladeTeamPanels()
+        ladeBanPanels()
     End Sub
 
 
 
     Public Sub setzeChampion(champName As String)
-        If _selectedTeam = "rot" Then
-            team_rot.setChampion(memory.championDB.getByName(champName))
-        ElseIf _selectedTeam = "blau" Then
-            team_blau.setChampion(memory.championDB.getByName(champName))
+        If Not _selectedTeam.Contains("ban") Then
+            If _selectedTeam = "rot" Then
+                team_rot.setChampion(memory.championDB.getByName(champName))
+            ElseIf _selectedTeam = "blau" Then
+                team_blau.setChampion(memory.championDB.getByName(champName))
+            End If
+            banSelector.removeChampionByName(champName)
+        Else
+            If _selectedTeam = "ban_rot" Then
+                ban_rot.setChampion(memory.championDB.getByName(champName))
+            ElseIf _selectedTeam = "ban_blau" Then
+                ban_blau.setChampion(memory.championDB.getByName(champName))
+            End If
+            champSelector.removeChampionByName(champName)
         End If
     End Sub
 
@@ -69,8 +108,28 @@
     Private Sub wennTeamPanelGesetzt(team As String)
         If team = "rot" Then
             team_blau.deselect()
-        Else
+            ban_blau.deselect()
+            ban_rot.deselect()
+            SplitContainer1.Panel1.Controls.Clear()
+            SplitContainer1.Panel1.Controls.Add(champSelector)
+        ElseIf team = "blau" Then
             team_rot.deselect()
+            ban_blau.deselect()
+            ban_rot.deselect()
+            SplitContainer1.Panel1.Controls.Clear()
+            SplitContainer1.Panel1.Controls.Add(champSelector)
+        ElseIf team = "ban_blau" Then
+            team_blau.deselect()
+            team_rot.deselect()
+            ban_rot.deselect()
+            SplitContainer1.Panel1.Controls.Clear()
+            SplitContainer1.Panel1.Controls.Add(banSelector)
+        Else
+            team_blau.deselect()
+            team_rot.deselect()
+            ban_blau.deselect()
+            SplitContainer1.Panel1.Controls.Clear()
+            SplitContainer1.Panel1.Controls.Add(banSelector)
         End If
         _selectedTeam = team
     End Sub
