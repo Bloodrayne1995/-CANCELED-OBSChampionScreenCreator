@@ -18,9 +18,11 @@
       <player role="top">
         <banner>
           <location x="0" y="0" />
+          <size width="" height="" />
         </banner>
         <square>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </square>
       </player>
       <player role="jungle">
@@ -29,6 +31,7 @@
         </banner>
         <square>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </square>
       </player>
       <player role="mid">
@@ -37,22 +40,27 @@
         </banner>
         <square>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </square>
       </player>
       <player role="adc">
         <banner>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </banner>
         <square>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </square>
       </player>
       <player role="support">
         <banner>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </banner>
         <square>
           <location x="0" y="0" />
+          <size width="64" height="64" />
         </square>
       </player>
     </team>

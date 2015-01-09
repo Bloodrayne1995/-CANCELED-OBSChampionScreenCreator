@@ -84,6 +84,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ChampionData.vb" />
+    <Compile Include="ChampionPanel.Designer.vb">
+      <DependentUpon>ChampionPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChampionPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ChampionSelector.Designer.vb">
       <DependentUpon>ChampionSelector.vb</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
   <ItemGroup>
     <EmbeddedResource Include="BanPanel.resx">
       <DependentUpon>BanPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChampionPanel.resx">
+      <DependentUpon>ChampionPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChampionSelector.resx">
       <DependentUpon>ChampionSelector.vb</DependentUpon>
@@ -912,11 +921,21 @@
     <Content Include="data\images\champions\squares\Zyra_Square_0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="data\images\output\HoverRahmen_60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\output\Spielerrahmen.Blau.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\output\Spielerrahmen.Rot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\images\swap_icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\output.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
