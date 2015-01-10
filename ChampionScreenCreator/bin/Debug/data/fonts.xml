@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fonts>
+  <font id="ChampionFont">
+    <setting name="name" value="Arial" />
+    <setting name="color" value="000;255;21" />
+    <setting name="size" value="18" />
+    <setting name="align" value="center" />
+  </font>
+</fonts>

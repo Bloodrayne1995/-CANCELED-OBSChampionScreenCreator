@@ -142,4 +142,23 @@
             modus = ToolStripComboBox1.SelectedIndex
         End If
     End Sub
+
+    Private Sub ZeigeTestImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZeigeTestImageToolStripMenuItem.Click
+        Dim x As New ImageCreator(memory)
+        AddHandler x.on_image_created, AddressOf test
+        x.testImage()
+    End Sub
+
+    Private Sub test(x As Panel)
+        Dim a As New Form
+        a.Size = New Size(1920, 1080)
+
+        a.Controls.Add(x)
+        a.ShowDialog()
+    End Sub
+
+    Private Sub OptionenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionenToolStripMenuItem.Click
+        Dim x As New Optionen(memory)
+        x.ShowDialog()
+    End Sub
 End Class

@@ -96,6 +96,7 @@
     <Compile Include="ChampionSelector.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ImageCreator.vb" />
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -117,6 +118,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Optionen.Designer.vb">
+      <DependentUpon>Optionen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Optionen.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Player.vb" />
     <Compile Include="Splash.Designer.vb">
@@ -151,6 +158,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Optionen.resx">
+      <DependentUpon>Optionen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +185,9 @@
     <Content Include="bin\Debug\ChampionScreenCreator.exe" />
     <Content Include="bin\Debug\ChampionScreenCreator.pdb" />
     <Content Include="data\champions.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\fonts.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\images\champions\banner\Aatrox_0.jpg">
@@ -919,6 +932,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\images\champions\squares\Zyra_Square_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\images\morgana_vs_ahri_2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\images\output\HoverRahmen_60.png">

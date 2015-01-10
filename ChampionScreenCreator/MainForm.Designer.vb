@@ -40,6 +40,8 @@ Partial Class MainForm
         Me.cmdReset = New System.Windows.Forms.Button()
         Me.cmdOK = New System.Windows.Forms.Button()
         Me.cmdVorschau = New System.Windows.Forms.Button()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZeigeTestImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.pnlTeamBlue.SuspendLayout()
         Me.pnlTeamRed.SuspendLayout()
@@ -50,7 +52,7 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.ToolStripComboBox1})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.ToolStripComboBox1, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1079, 27)
@@ -67,7 +69,7 @@ Partial Class MainForm
         'OptionenToolStripMenuItem
         '
         Me.OptionenToolStripMenuItem.Name = "OptionenToolStripMenuItem"
-        Me.OptionenToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.OptionenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OptionenToolStripMenuItem.Text = "Optionen"
         '
         'ToolStripSeparator1
@@ -224,6 +226,19 @@ Partial Class MainForm
         Me.cmdVorschau.Text = "Vorschau"
         Me.cmdVorschau.UseVisualStyleBackColor = True
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZeigeTestImageToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(90, 23)
+        Me.ToolStripMenuItem1.Text = "Debug-Menu"
+        '
+        'ZeigeTestImageToolStripMenuItem
+        '
+        Me.ZeigeTestImageToolStripMenuItem.Name = "ZeigeTestImageToolStripMenuItem"
+        Me.ZeigeTestImageToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ZeigeTestImageToolStripMenuItem.Text = "zeige Test Image"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -267,4 +282,6 @@ Partial Class MainForm
     Friend WithEvents cmdVorschau As System.Windows.Forms.Button
     Friend WithEvents cmdOK As System.Windows.Forms.Button
     Friend WithEvents cmdReset As System.Windows.Forms.Button
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ZeigeTestImageToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

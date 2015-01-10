@@ -1,4 +1,5 @@
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\champions.xml
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\fonts.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\champions\banner\Aatrox_0.jpg
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\champions\banner\Ahri_0.jpg
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\champions\banner\Akali_0.jpg
@@ -247,6 +248,10 @@ C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCrea
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\champions\squares\Ziggs_Square_0.png
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\champions\squares\Zilean_Square_0.png
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\champions\squares\Zyra_Square_0.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\morgana_vs_ahri_2.jpg
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\output\HoverRahmen_60.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\output\Spielerrahmen.Blau.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\output\Spielerrahmen.Rot.png
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\images\swap_icon.png
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\data\output.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\ChampionScreenCreator.exe.config
@@ -254,9 +259,11 @@ C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCrea
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\ChampionScreenCreator.pdb
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Release\ChampionScreenCreator.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.BanPanel.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.ChampionPanel.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.ChampionSelector.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.MainForm.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.Resources.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.Optionen.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.Splash.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.TeamPanel.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.vbproj.GenerateResource.Cache

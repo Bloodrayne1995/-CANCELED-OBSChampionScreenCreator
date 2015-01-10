@@ -248,22 +248,32 @@ Public Class TeamPanel
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
         If Not IsNothing(TOPLane) Then
             pnlTop.BackgroundImage = TOPLane.Square
+        Else
+            pnlTop.BackgroundImage = Nothing
         End If
 
         If Not IsNothing(JUNGLE) Then
             pnlJungle.BackgroundImage = JUNGLE.Square
+        Else
+            pnlJungle.BackgroundImage = Nothing
         End If
 
         If Not IsNothing(MID) Then
             pnlMid.BackgroundImage = MID.Square
+        Else
+            pnlMid.BackgroundImage = Nothing
         End If
 
         If Not IsNothing(CARRY) Then
             pnlCarry.BackgroundImage = CARRY.Square
+        Else
+            pnlCarry.BackgroundImage = Nothing
         End If
 
         If Not IsNothing(SUPPORT) Then
             pnlSupport.BackgroundImage = SUPPORT.Square
+        Else
+            pnlSupport.BackgroundImage = Nothing
         End If
 
         MyBase.OnPaint(e)
