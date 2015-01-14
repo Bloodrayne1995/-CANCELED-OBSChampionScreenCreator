@@ -23,3 +23,27 @@ C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\OBSC
 C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\OBSChampionScreen\obj\Debug\OBSChampionScreen.xml
 C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\OBSChampionScreen\obj\Debug\OBSChampionScreen.pdb
 C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\OBSChampionScreen\obj\Debug\OBSChampionScreen.vbprojResolveAssemblyReference.cache
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams.xml
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams\euw\alliance.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams\euw\fnatic.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams\euw\skgaming.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams\na\tsm.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams\na\cloud9.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\teams\na\lmq.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\morgana_vs_ahri_2.jpg
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\Resources\lol.png
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\OBSChampionScreen.exe.config
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\OBSChampionScreen.exe
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\OBSChampionScreen.pdb
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\bin\Debug\OBSChampionScreen.xml
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.AboutBox1.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.ChampionSelecterV2.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.MainForm.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.Resources.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.Preview.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.SettingsForm.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.Team_Editor.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.vbproj.GenerateResource.Cache
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.exe
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.xml
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.pdb

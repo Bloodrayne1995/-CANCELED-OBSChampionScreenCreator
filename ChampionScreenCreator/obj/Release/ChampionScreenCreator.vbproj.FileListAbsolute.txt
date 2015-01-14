@@ -270,3 +270,4 @@ C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCrea
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.exe
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.pdb
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Release\ChampionScreenCreator.vbprojResolveAssemblyReference.cache

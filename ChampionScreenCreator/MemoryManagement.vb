@@ -39,14 +39,13 @@ Public Class MemoryManagement
     End Sub
 
     Private Sub debug_output()
-#If DEBUG Then
-        Debug.WriteLine(stepDescription)
-#End If
+        Console.WriteLine(stepDescription)
     End Sub
 
     Private Sub schritt(str As String)
         stepDescription = str
         RaiseEvent nextStep()
+        debug_output()
     End Sub
 
 

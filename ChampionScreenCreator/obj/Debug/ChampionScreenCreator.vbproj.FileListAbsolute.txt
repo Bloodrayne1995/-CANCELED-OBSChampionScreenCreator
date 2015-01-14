@@ -262,6 +262,7 @@ C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\Cham
 C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\ChampionScreenCreator\obj\Debug\ChampionScreenCreator.ChampionSelector.resources
 C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\ChampionScreenCreator\bin\Debug\data\images\swap_icon.png
 C:\Users\Bloodrayne\documents\visual studio 2013\Projects\OBSChampionScreen\ChampionScreenCreator\obj\Debug\ChampionScreenCreator.TeamPanel.resources
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\ChampionScreenCreator.exe.config
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\data\champions.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\data\fonts.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\data\images\champions\banner\Aatrox_0.jpg
@@ -518,7 +519,6 @@ C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCrea
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\data\images\output\Spielerrahmen.Rot.png
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\data\images\swap_icon.png
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\data\output.xml
-C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\ChampionScreenCreator.exe.config
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\bin\Debug\ChampionScreenCreator.exe
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Debug\ChampionScreenCreator.BanPanel.resources
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\ChampionScreenCreator\obj\Debug\ChampionScreenCreator.ChampionPanel.resources
