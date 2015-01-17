@@ -47,3 +47,4 @@ C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.exe
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.xml
 C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.pdb
+C:\Users\Bloodrayne\Documents\GitHub\OBSChampionScreenCreator\OBSChampionScreen\obj\Debug\OBSChampionScreen.vbprojResolveAssemblyReference.cache

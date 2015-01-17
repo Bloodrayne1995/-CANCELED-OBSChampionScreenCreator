@@ -52,7 +52,7 @@
         Dim mainP As New Panel
         mainP.Size = New Size(1920, 1080)
         mainP.BackgroundImageLayout = ImageLayout.Stretch
-        mainP.BackgroundImage = Image.FromFile(".\data\images\morgana_vs_ahri_2.jpg")
+        mainP.BackgroundImage = Image.FromFile(mem.outputSettings.settings("backgroundImage"))
 
         If mem.outputSettings.settings("showBanner") = "true" Then
             'Team-Blau:

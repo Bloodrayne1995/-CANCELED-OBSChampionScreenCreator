@@ -28,6 +28,8 @@ Partial Class MainForm
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BeendenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZeigeTestImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlTeamBlue = New System.Windows.Forms.Panel()
         Me.grpBlauAufstellung = New System.Windows.Forms.GroupBox()
         Me.grpBlauTeam = New System.Windows.Forms.GroupBox()
@@ -40,8 +42,7 @@ Partial Class MainForm
         Me.cmdReset = New System.Windows.Forms.Button()
         Me.cmdOK = New System.Windows.Forms.Button()
         Me.cmdVorschau = New System.Windows.Forms.Button()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZeigeTestImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.pnlTeamBlue.SuspendLayout()
         Me.pnlTeamRed.SuspendLayout()
@@ -69,7 +70,7 @@ Partial Class MainForm
         'OptionenToolStripMenuItem
         '
         Me.OptionenToolStripMenuItem.Name = "OptionenToolStripMenuItem"
-        Me.OptionenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OptionenToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.OptionenToolStripMenuItem.Text = "Optionen"
         '
         'ToolStripSeparator1
@@ -88,6 +89,19 @@ Partial Class MainForm
         Me.ToolStripComboBox1.Items.AddRange(New Object() {"Abwechselnde Wahl", "Freie Wahl"})
         Me.ToolStripComboBox1.Name = "ToolStripComboBox1"
         Me.ToolStripComboBox1.Size = New System.Drawing.Size(150, 23)
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZeigeTestImageToolStripMenuItem, Me.SaveTestToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(90, 23)
+        Me.ToolStripMenuItem1.Text = "Debug-Menu"
+        '
+        'ZeigeTestImageToolStripMenuItem
+        '
+        Me.ZeigeTestImageToolStripMenuItem.Name = "ZeigeTestImageToolStripMenuItem"
+        Me.ZeigeTestImageToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ZeigeTestImageToolStripMenuItem.Text = "zeige Test Image"
         '
         'pnlTeamBlue
         '
@@ -226,18 +240,11 @@ Partial Class MainForm
         Me.cmdVorschau.Text = "Vorschau"
         Me.cmdVorschau.UseVisualStyleBackColor = True
         '
-        'ToolStripMenuItem1
+        'SaveTestToolStripMenuItem
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZeigeTestImageToolStripMenuItem})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(90, 23)
-        Me.ToolStripMenuItem1.Text = "Debug-Menu"
-        '
-        'ZeigeTestImageToolStripMenuItem
-        '
-        Me.ZeigeTestImageToolStripMenuItem.Name = "ZeigeTestImageToolStripMenuItem"
-        Me.ZeigeTestImageToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.ZeigeTestImageToolStripMenuItem.Text = "zeige Test Image"
+        Me.SaveTestToolStripMenuItem.Name = "SaveTestToolStripMenuItem"
+        Me.SaveTestToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.SaveTestToolStripMenuItem.Text = "save-Test"
         '
         'MainForm
         '
@@ -284,4 +291,5 @@ Partial Class MainForm
     Friend WithEvents cmdReset As System.Windows.Forms.Button
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ZeigeTestImageToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SaveTestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

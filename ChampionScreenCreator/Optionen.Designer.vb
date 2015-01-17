@@ -25,28 +25,49 @@ Partial Class Optionen
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tbcOptionrn = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.cmdCancel = New System.Windows.Forms.Button()
-        Me.cmdSave = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.pctBackground = New System.Windows.Forms.PictureBox()
+        Me.cmdBackgroundPathFinder = New System.Windows.Forms.Button()
+        Me.txtBackgroundPath = New System.Windows.Forms.TextBox()
+        Me.grpOutputSettings = New System.Windows.Forms.GroupBox()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtBackgroundPath = New System.Windows.Forms.TextBox()
-        Me.cmdBackgroundPathFinder = New System.Windows.Forms.Button()
-        Me.pctBackground = New System.Windows.Forms.PictureBox()
+        Me.cmdCancel = New System.Windows.Forms.Button()
+        Me.cmdSave = New System.Windows.Forms.Button()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.lstFonts = New System.Windows.Forms.ListBox()
+        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.txtFontName = New System.Windows.Forms.TextBox()
+        Me.cmdSaveNew = New System.Windows.Forms.Button()
+        Me.cmdDelete = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbAvaibleFonts = New System.Windows.Forms.ComboBox()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.tbcOptionrn.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.pctBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpOutputSettings.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer2.Panel1.SuspendLayout()
+        Me.SplitContainer2.Panel2.SuspendLayout()
+        Me.SplitContainer2.SuspendLayout()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer3.Panel1.SuspendLayout()
+        Me.SplitContainer3.Panel2.SuspendLayout()
+        Me.SplitContainer3.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -72,6 +93,7 @@ Partial Class Optionen
         'tbcOptionrn
         '
         Me.tbcOptionrn.Controls.Add(Me.TabPage2)
+        Me.tbcOptionrn.Controls.Add(Me.TabPage1)
         Me.tbcOptionrn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tbcOptionrn.Location = New System.Drawing.Point(0, 0)
         Me.tbcOptionrn.Name = "tbcOptionrn"
@@ -82,7 +104,7 @@ Partial Class Optionen
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.GroupBox2)
-        Me.TabPage2.Controls.Add(Me.GroupBox1)
+        Me.TabPage2.Controls.Add(Me.grpOutputSettings)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -91,38 +113,56 @@ Partial Class Optionen
         Me.TabPage2.Text = "Ausgabe"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'cmdCancel
+        'GroupBox2
         '
-        Me.cmdCancel.Location = New System.Drawing.Point(382, 3)
-        Me.cmdCancel.Name = "cmdCancel"
-        Me.cmdCancel.Size = New System.Drawing.Size(75, 36)
-        Me.cmdCancel.TabIndex = 1
-        Me.cmdCancel.Text = "Abbrechen"
-        Me.cmdCancel.UseVisualStyleBackColor = True
+        Me.GroupBox2.Controls.Add(Me.pctBackground)
+        Me.GroupBox2.Controls.Add(Me.cmdBackgroundPathFinder)
+        Me.GroupBox2.Controls.Add(Me.txtBackgroundPath)
+        Me.GroupBox2.Location = New System.Drawing.Point(207, 6)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(321, 220)
+        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Hintergrund-Bild:"
         '
-        'cmdSave
+        'pctBackground
         '
-        Me.cmdSave.Location = New System.Drawing.Point(463, 3)
-        Me.cmdSave.Name = "cmdSave"
-        Me.cmdSave.Size = New System.Drawing.Size(75, 36)
-        Me.cmdSave.TabIndex = 0
-        Me.cmdSave.Text = "Speichern"
-        Me.cmdSave.UseVisualStyleBackColor = True
+        Me.pctBackground.Location = New System.Drawing.Point(10, 51)
+        Me.pctBackground.Name = "pctBackground"
+        Me.pctBackground.Size = New System.Drawing.Size(302, 159)
+        Me.pctBackground.TabIndex = 2
+        Me.pctBackground.TabStop = False
         '
-        'GroupBox1
+        'cmdBackgroundPathFinder
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox6)
-        Me.GroupBox1.Controls.Add(Me.CheckBox5)
-        Me.GroupBox1.Controls.Add(Me.CheckBox4)
-        Me.GroupBox1.Controls.Add(Me.CheckBox3)
-        Me.GroupBox1.Controls.Add(Me.CheckBox2)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(193, 220)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Einstellungen:"
+        Me.cmdBackgroundPathFinder.Location = New System.Drawing.Point(266, 17)
+        Me.cmdBackgroundPathFinder.Name = "cmdBackgroundPathFinder"
+        Me.cmdBackgroundPathFinder.Size = New System.Drawing.Size(47, 23)
+        Me.cmdBackgroundPathFinder.TabIndex = 1
+        Me.cmdBackgroundPathFinder.Text = ". . ."
+        Me.cmdBackgroundPathFinder.UseVisualStyleBackColor = True
+        '
+        'txtBackgroundPath
+        '
+        Me.txtBackgroundPath.Location = New System.Drawing.Point(7, 19)
+        Me.txtBackgroundPath.Name = "txtBackgroundPath"
+        Me.txtBackgroundPath.Size = New System.Drawing.Size(254, 20)
+        Me.txtBackgroundPath.TabIndex = 0
+        '
+        'grpOutputSettings
+        '
+        Me.grpOutputSettings.Controls.Add(Me.CheckBox6)
+        Me.grpOutputSettings.Controls.Add(Me.CheckBox5)
+        Me.grpOutputSettings.Controls.Add(Me.CheckBox4)
+        Me.grpOutputSettings.Controls.Add(Me.CheckBox3)
+        Me.grpOutputSettings.Controls.Add(Me.CheckBox2)
+        Me.grpOutputSettings.Controls.Add(Me.CheckBox1)
+        Me.grpOutputSettings.Location = New System.Drawing.Point(8, 6)
+        Me.grpOutputSettings.Name = "grpOutputSettings"
+        Me.grpOutputSettings.Size = New System.Drawing.Size(193, 220)
+        Me.grpOutputSettings.TabIndex = 0
+        Me.grpOutputSettings.TabStop = False
+        Me.grpOutputSettings.Text = "Einstellungen:"
         '
         'CheckBox6
         '
@@ -190,41 +230,154 @@ Partial Class Optionen
         Me.CheckBox1.Text = "Zeige Team-Logos"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'GroupBox2
+        'cmdCancel
         '
-        Me.GroupBox2.Controls.Add(Me.pctBackground)
-        Me.GroupBox2.Controls.Add(Me.cmdBackgroundPathFinder)
-        Me.GroupBox2.Controls.Add(Me.txtBackgroundPath)
-        Me.GroupBox2.Location = New System.Drawing.Point(207, 6)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(321, 220)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Hintergrund-Bild:"
+        Me.cmdCancel.Location = New System.Drawing.Point(382, 3)
+        Me.cmdCancel.Name = "cmdCancel"
+        Me.cmdCancel.Size = New System.Drawing.Size(75, 36)
+        Me.cmdCancel.TabIndex = 1
+        Me.cmdCancel.Text = "Abbrechen"
+        Me.cmdCancel.UseVisualStyleBackColor = True
         '
-        'txtBackgroundPath
+        'cmdSave
         '
-        Me.txtBackgroundPath.Location = New System.Drawing.Point(7, 19)
-        Me.txtBackgroundPath.Name = "txtBackgroundPath"
-        Me.txtBackgroundPath.Size = New System.Drawing.Size(254, 20)
-        Me.txtBackgroundPath.TabIndex = 0
+        Me.cmdSave.Location = New System.Drawing.Point(463, 3)
+        Me.cmdSave.Name = "cmdSave"
+        Me.cmdSave.Size = New System.Drawing.Size(75, 36)
+        Me.cmdSave.TabIndex = 0
+        Me.cmdSave.Text = "Speichern"
+        Me.cmdSave.UseVisualStyleBackColor = True
         '
-        'cmdBackgroundPathFinder
+        'TabPage1
         '
-        Me.cmdBackgroundPathFinder.Location = New System.Drawing.Point(266, 17)
-        Me.cmdBackgroundPathFinder.Name = "cmdBackgroundPathFinder"
-        Me.cmdBackgroundPathFinder.Size = New System.Drawing.Size(47, 23)
-        Me.cmdBackgroundPathFinder.TabIndex = 1
-        Me.cmdBackgroundPathFinder.Text = ". . ."
-        Me.cmdBackgroundPathFinder.UseVisualStyleBackColor = True
+        Me.TabPage1.Controls.Add(Me.SplitContainer2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(534, 232)
+        Me.TabPage1.TabIndex = 2
+        Me.TabPage1.Text = "Schriftarten"
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'pctBackground
+        'SplitContainer2
         '
-        Me.pctBackground.Location = New System.Drawing.Point(10, 51)
-        Me.pctBackground.Name = "pctBackground"
-        Me.pctBackground.Size = New System.Drawing.Size(302, 159)
-        Me.pctBackground.TabIndex = 2
-        Me.pctBackground.TabStop = False
+        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer2.Location = New System.Drawing.Point(3, 3)
+        Me.SplitContainer2.Name = "SplitContainer2"
+        '
+        'SplitContainer2.Panel1
+        '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.lstFonts)
+        '
+        'SplitContainer2.Panel2
+        '
+        Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer3)
+        Me.SplitContainer2.Size = New System.Drawing.Size(528, 226)
+        Me.SplitContainer2.SplitterDistance = 147
+        Me.SplitContainer2.TabIndex = 0
+        '
+        'lstFonts
+        '
+        Me.lstFonts.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lstFonts.FormattingEnabled = True
+        Me.lstFonts.Location = New System.Drawing.Point(0, 0)
+        Me.lstFonts.Name = "lstFonts"
+        Me.lstFonts.Size = New System.Drawing.Size(147, 226)
+        Me.lstFonts.TabIndex = 0
+        '
+        'SplitContainer3
+        '
+        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer3.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer3.Name = "SplitContainer3"
+        Me.SplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer3.Panel1
+        '
+        Me.SplitContainer3.Panel1.Controls.Add(Me.cmdDelete)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.cmdSaveNew)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.txtFontName)
+        '
+        'SplitContainer3.Panel2
+        '
+        Me.SplitContainer3.Panel2.Controls.Add(Me.TableLayoutPanel1)
+        Me.SplitContainer3.Size = New System.Drawing.Size(377, 226)
+        Me.SplitContainer3.SplitterDistance = 34
+        Me.SplitContainer3.TabIndex = 0
+        '
+        'txtFontName
+        '
+        Me.txtFontName.Location = New System.Drawing.Point(3, 7)
+        Me.txtFontName.Name = "txtFontName"
+        Me.txtFontName.Size = New System.Drawing.Size(203, 20)
+        Me.txtFontName.TabIndex = 0
+        '
+        'cmdSaveNew
+        '
+        Me.cmdSaveNew.Location = New System.Drawing.Point(293, 5)
+        Me.cmdSaveNew.Name = "cmdSaveNew"
+        Me.cmdSaveNew.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSaveNew.TabIndex = 1
+        Me.cmdSaveNew.Text = "Save / New"
+        Me.cmdSaveNew.UseVisualStyleBackColor = True
+        '
+        'cmdDelete
+        '
+        Me.cmdDelete.Location = New System.Drawing.Point(212, 5)
+        Me.cmdDelete.Name = "cmdDelete"
+        Me.cmdDelete.Size = New System.Drawing.Size(75, 23)
+        Me.cmdDelete.TabIndex = 2
+        Me.cmdDelete.Tag = "del"
+        Me.cmdDelete.Text = "Löschen"
+        Me.cmdDelete.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.67213!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.32787!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.cmbAvaibleFonts, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 3)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(366, 48)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 24)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Schriftart:"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label3.Location = New System.Drawing.Point(3, 24)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 24)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Größe:"
+        '
+        'cmbAvaibleFonts
+        '
+        Me.cmbAvaibleFonts.FormattingEnabled = True
+        Me.cmbAvaibleFonts.Location = New System.Drawing.Point(74, 3)
+        Me.cmbAvaibleFonts.Name = "cmbAvaibleFonts"
+        Me.cmbAvaibleFonts.Size = New System.Drawing.Size(207, 21)
+        Me.cmbAvaibleFonts.TabIndex = 3
         '
         'Optionen
         '
@@ -243,11 +396,23 @@ Partial Class Optionen
         Me.SplitContainer1.ResumeLayout(False)
         Me.tbcOptionrn.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.pctBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpOutputSettings.ResumeLayout(False)
+        Me.grpOutputSettings.PerformLayout()
+        Me.TabPage1.ResumeLayout(False)
+        Me.SplitContainer2.Panel1.ResumeLayout(False)
+        Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer2.ResumeLayout(False)
+        Me.SplitContainer3.Panel1.ResumeLayout(False)
+        Me.SplitContainer3.Panel1.PerformLayout()
+        Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer3.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -257,7 +422,7 @@ Partial Class Optionen
     Friend WithEvents cmdCancel As System.Windows.Forms.Button
     Friend WithEvents cmdSave As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents grpOutputSettings As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
@@ -267,4 +432,15 @@ Partial Class Optionen
     Friend WithEvents pctBackground As System.Windows.Forms.PictureBox
     Friend WithEvents cmdBackgroundPathFinder As System.Windows.Forms.Button
     Friend WithEvents txtBackgroundPath As System.Windows.Forms.TextBox
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
+    Friend WithEvents lstFonts As System.Windows.Forms.ListBox
+    Friend WithEvents SplitContainer3 As System.Windows.Forms.SplitContainer
+    Friend WithEvents cmdDelete As System.Windows.Forms.Button
+    Friend WithEvents cmdSaveNew As System.Windows.Forms.Button
+    Friend WithEvents txtFontName As System.Windows.Forms.TextBox
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cmbAvaibleFonts As System.Windows.Forms.ComboBox
 End Class

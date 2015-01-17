@@ -158,6 +158,11 @@ Public Class MemoryManagement
                 Throw New Exception("Ausrichtung wurde nicht gefunden")
             End If
         End Function
+
+
+        Public Function getFonts() As Dictionary(Of String, Font)
+            Return fontdb
+        End Function
     End Class
 
     Public Class OutputSettingDB
@@ -167,8 +172,15 @@ Public Class MemoryManagement
         Public bans_blue As New List(Of Ban)
         Public bans_red As New List(Of Ban)
 
-
         Public Sub load(xmlFile As String)
+            'Vorher alles leeren
+            settings.Clear()
+            team_blue.Clear()
+            team_red.Clear()
+            bans_blue.Clear()
+            bans_red.Clear()
+
+            'Laden
             Dim doc As New XmlDocument
             doc.Load(xmlFile)
             For Each x As XmlNode In doc.ChildNodes(1).ChildNodes
@@ -182,7 +194,7 @@ Public Class MemoryManagement
                             Dim b As New Ban
                             b.INDEX = Integer.Parse(banned.Attributes("row").Value)
                             b.LOCATION = New Point(Integer.Parse(banned.Attributes("x").Value), Integer.Parse(banned.Attributes("y").Value))
-                            If team.Attributes("name").Value = "blue" Then
+                            If team.Attributes("name").Value = "blau" Then
                                 bans_blue.Add(b)
                             Else
                                 bans_red.Add(b)
@@ -220,7 +232,6 @@ Public Class MemoryManagement
                     Next
                 End If
             Next
-
         End Sub
 
         Public Function getPlayer(farbe As String, rolle As String) As Player
@@ -244,6 +255,159 @@ Public Class MemoryManagement
             Return erg
         End Function
 
+        Public Sub save(Optional loadAfterSave As Boolean = True)
+            Dim writer As New XmlTextWriter(".\data\output.xml", System.Text.Encoding.UTF8)
+            With writer
+                .Formatting = Formatting.Indented
+                .Indentation = 4
+                .WriteStartDocument()
+
+                'Root
+                .WriteStartElement("output")
+
+                'Settings
+                .WriteStartElement("settings")
+                For Each x As String In settings.Keys
+                    .WriteStartElement("setting")
+                    .WriteAttributeString("name", x)
+                    .WriteAttributeString("value", settings(x))
+                    .WriteEndElement()
+                Next
+                .WriteEndElement()
+
+                'MainPanel
+                .WriteStartElement("mainPanel")
+
+                'Team
+                .WriteStartElement("team")
+                .WriteAttributeString("name", "blau")
+
+                'Bans
+                .WriteStartElement("bans")
+                For Each a As Ban In bans_blue
+                    .WriteStartElement("ban")
+                    .WriteAttributeString("row", a.INDEX)
+                    .WriteAttributeString("x", a.LOCATION.X)
+                    .WriteAttributeString("y", a.LOCATION.Y)
+                    .WriteEndElement()
+                Next
+                .WriteEndElement()
+
+                'Team-Panels:
+                For Each p As Player In team_blue
+                    .WriteStartElement("player")
+                    .WriteAttributeString("role", p.ROLLE)
+
+                    'Banner
+                    .WriteStartElement("banner")
+
+                    'Banner-Position
+                    .WriteStartElement("location")
+                    .WriteAttributeString("x", p.BANNER.X)
+                    .WriteAttributeString("y", p.BANNER.Y)
+                    .WriteEndElement()
+
+                    'Banner-Size
+                    .WriteStartElement("size")
+                    .WriteAttributeString("width", p.BANNER_Size.Width)
+                    .WriteAttributeString("height", p.BANNER_Size.Height)
+                    .WriteEndElement()
+
+                    .WriteEndElement()
+
+                    'Square
+                    .WriteStartElement("square")
+
+                    'Square-Position
+                    .WriteStartElement("location")
+                    .WriteAttributeString("x", p.SQUARE.X)
+                    .WriteAttributeString("y", p.SQUARE.Y)
+                    .WriteEndElement() 'Location
+
+                    'Square-Size
+                    .WriteStartElement("size")
+                    .WriteAttributeString("width", p.SQUARE_Size.Width)
+                    .WriteAttributeString("height", p.SQUARE_Size.Height)
+                    .WriteEndElement() 'Size
+
+                    .WriteEndElement() 'Square
+
+                    .WriteEndElement() 'Player
+                Next
+
+                .WriteEndElement() 'team
+
+
+                .WriteStartElement("team")
+                .WriteAttributeString("name", "rot")
+
+                'Bans
+                .WriteStartElement("bans")
+                For Each a As Ban In bans_red
+                    .WriteStartElement("ban")
+                    .WriteAttributeString("row", a.INDEX)
+                    .WriteAttributeString("x", a.LOCATION.X)
+                    .WriteAttributeString("y", a.LOCATION.Y)
+                    .WriteEndElement()
+                Next
+                .WriteEndElement()
+
+                'Team-Panels:
+                For Each p As Player In team_red
+                    .WriteStartElement("player")
+                    .WriteAttributeString("role", p.ROLLE)
+
+                    'Banner
+                    .WriteStartElement("banner")
+
+                    'Banner-Position
+                    .WriteStartElement("location")
+                    .WriteAttributeString("x", p.BANNER.X)
+                    .WriteAttributeString("y", p.BANNER.Y)
+                    .WriteEndElement()
+
+                    'Banner-Size
+                    .WriteStartElement("size")
+                    .WriteAttributeString("width", p.BANNER_Size.Width)
+                    .WriteAttributeString("height", p.BANNER_Size.Height)
+                    .WriteEndElement()
+
+                    .WriteEndElement()
+
+                    'Square
+                    .WriteStartElement("square")
+
+                    'Square-Position
+                    .WriteStartElement("location")
+                    .WriteAttributeString("x", p.SQUARE.X)
+                    .WriteAttributeString("y", p.SQUARE.Y)
+                    .WriteEndElement() 'Location
+
+                    'Square-Size
+                    .WriteStartElement("size")
+                    .WriteAttributeString("width", p.SQUARE_Size.Width)
+                    .WriteAttributeString("height", p.SQUARE_Size.Height)
+                    .WriteEndElement() 'Size
+
+                    .WriteEndElement() 'Square
+
+                    .WriteEndElement() 'Player
+                Next
+
+                .WriteEndElement() 'team
+
+                .WriteEndElement() 'mainPanel
+
+                .WriteEndElement() 'output
+
+                .Flush()
+                .Close()
+            End With
+
+            If loadAfterSave Then
+                Me.load(".\data\output.xml")
+            End If
+        End Sub
 
     End Class
 End Class

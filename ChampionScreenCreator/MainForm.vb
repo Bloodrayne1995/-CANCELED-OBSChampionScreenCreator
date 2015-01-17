@@ -161,4 +161,8 @@
         Dim x As New Optionen(memory)
         x.ShowDialog()
     End Sub
+
+    Private Sub SaveTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveTestToolStripMenuItem.Click
+        memory.outputSettings.save()
+    End Sub
 End Class
