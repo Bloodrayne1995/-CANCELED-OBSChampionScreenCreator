@@ -36,19 +36,28 @@ Partial Class Optionen
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.cmdCancel = New System.Windows.Forms.Button()
-        Me.cmdSave = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.cmdFontAdd = New System.Windows.Forms.Button()
         Me.lstFonts = New System.Windows.Forms.ListBox()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
-        Me.txtFontName = New System.Windows.Forms.TextBox()
-        Me.cmdSaveNew = New System.Windows.Forms.Button()
         Me.cmdDelete = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdSaveFont = New System.Windows.Forms.Button()
+        Me.txtFontName = New System.Windows.Forms.TextBox()
+        Me.tblFontForm = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbAvaibleFonts = New System.Windows.Forms.ComboBox()
+        Me.numFontSize = New System.Windows.Forms.NumericUpDown()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.pctFontColor = New System.Windows.Forms.Panel()
+        Me.lblFontRGB = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cmbFontAlignment = New System.Windows.Forms.ComboBox()
+        Me.lblFontvorschau = New System.Windows.Forms.Label()
+        Me.cmdCancel = New System.Windows.Forms.Button()
+        Me.cmdSave = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -67,7 +76,9 @@ Partial Class Optionen
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.tblFontForm.SuspendLayout()
+        CType(Me.numFontSize, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -230,24 +241,6 @@ Partial Class Optionen
         Me.CheckBox1.Text = "Zeige Team-Logos"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'cmdCancel
-        '
-        Me.cmdCancel.Location = New System.Drawing.Point(382, 3)
-        Me.cmdCancel.Name = "cmdCancel"
-        Me.cmdCancel.Size = New System.Drawing.Size(75, 36)
-        Me.cmdCancel.TabIndex = 1
-        Me.cmdCancel.Text = "Abbrechen"
-        Me.cmdCancel.UseVisualStyleBackColor = True
-        '
-        'cmdSave
-        '
-        Me.cmdSave.Location = New System.Drawing.Point(463, 3)
-        Me.cmdSave.Name = "cmdSave"
-        Me.cmdSave.Size = New System.Drawing.Size(75, 36)
-        Me.cmdSave.TabIndex = 0
-        Me.cmdSave.Text = "Speichern"
-        Me.cmdSave.UseVisualStyleBackColor = True
-        '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.SplitContainer2)
@@ -267,6 +260,7 @@ Partial Class Optionen
         '
         'SplitContainer2.Panel1
         '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.cmdFontAdd)
         Me.SplitContainer2.Panel1.Controls.Add(Me.lstFonts)
         '
         'SplitContainer2.Panel2
@@ -276,13 +270,24 @@ Partial Class Optionen
         Me.SplitContainer2.SplitterDistance = 147
         Me.SplitContainer2.TabIndex = 0
         '
+        'cmdFontAdd
+        '
+        Me.cmdFontAdd.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.cmdFontAdd.Location = New System.Drawing.Point(0, 203)
+        Me.cmdFontAdd.Name = "cmdFontAdd"
+        Me.cmdFontAdd.Size = New System.Drawing.Size(147, 23)
+        Me.cmdFontAdd.TabIndex = 1
+        Me.cmdFontAdd.Tag = "new"
+        Me.cmdFontAdd.Text = "Hinzufügen"
+        Me.cmdFontAdd.UseVisualStyleBackColor = True
+        '
         'lstFonts
         '
-        Me.lstFonts.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lstFonts.Dock = System.Windows.Forms.DockStyle.Top
         Me.lstFonts.FormattingEnabled = True
         Me.lstFonts.Location = New System.Drawing.Point(0, 0)
         Me.lstFonts.Name = "lstFonts"
-        Me.lstFonts.Size = New System.Drawing.Size(147, 226)
+        Me.lstFonts.Size = New System.Drawing.Size(147, 199)
         Me.lstFonts.TabIndex = 0
         '
         'SplitContainer3
@@ -295,31 +300,15 @@ Partial Class Optionen
         'SplitContainer3.Panel1
         '
         Me.SplitContainer3.Panel1.Controls.Add(Me.cmdDelete)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.cmdSaveNew)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.cmdSaveFont)
         Me.SplitContainer3.Panel1.Controls.Add(Me.txtFontName)
         '
         'SplitContainer3.Panel2
         '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.TableLayoutPanel1)
+        Me.SplitContainer3.Panel2.Controls.Add(Me.tblFontForm)
         Me.SplitContainer3.Size = New System.Drawing.Size(377, 226)
         Me.SplitContainer3.SplitterDistance = 34
         Me.SplitContainer3.TabIndex = 0
-        '
-        'txtFontName
-        '
-        Me.txtFontName.Location = New System.Drawing.Point(3, 7)
-        Me.txtFontName.Name = "txtFontName"
-        Me.txtFontName.Size = New System.Drawing.Size(203, 20)
-        Me.txtFontName.TabIndex = 0
-        '
-        'cmdSaveNew
-        '
-        Me.cmdSaveNew.Location = New System.Drawing.Point(293, 5)
-        Me.cmdSaveNew.Name = "cmdSaveNew"
-        Me.cmdSaveNew.Size = New System.Drawing.Size(75, 23)
-        Me.cmdSaveNew.TabIndex = 1
-        Me.cmdSaveNew.Text = "Save / New"
-        Me.cmdSaveNew.UseVisualStyleBackColor = True
         '
         'cmdDelete
         '
@@ -331,21 +320,70 @@ Partial Class Optionen
         Me.cmdDelete.Text = "Löschen"
         Me.cmdDelete.UseVisualStyleBackColor = True
         '
-        'TableLayoutPanel1
+        'cmdSaveFont
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.67213!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.32787!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cmbAvaibleFonts, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 3)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(366, 48)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.cmdSaveFont.Location = New System.Drawing.Point(293, 5)
+        Me.cmdSaveFont.Name = "cmdSaveFont"
+        Me.cmdSaveFont.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSaveFont.TabIndex = 1
+        Me.cmdSaveFont.Text = "Speichern"
+        Me.cmdSaveFont.UseVisualStyleBackColor = True
+        '
+        'txtFontName
+        '
+        Me.txtFontName.Location = New System.Drawing.Point(3, 7)
+        Me.txtFontName.Name = "txtFontName"
+        Me.txtFontName.Size = New System.Drawing.Size(203, 20)
+        Me.txtFontName.TabIndex = 0
+        '
+        'tblFontForm
+        '
+        Me.tblFontForm.ColumnCount = 2
+        Me.tblFontForm.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.31148!))
+        Me.tblFontForm.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.68852!))
+        Me.tblFontForm.Controls.Add(Me.Label2, 0, 2)
+        Me.tblFontForm.Controls.Add(Me.Label3, 0, 1)
+        Me.tblFontForm.Controls.Add(Me.Label1, 0, 0)
+        Me.tblFontForm.Controls.Add(Me.cmbAvaibleFonts, 1, 0)
+        Me.tblFontForm.Controls.Add(Me.numFontSize, 1, 1)
+        Me.tblFontForm.Controls.Add(Me.FlowLayoutPanel1, 1, 2)
+        Me.tblFontForm.Controls.Add(Me.Label4, 0, 3)
+        Me.tblFontForm.Controls.Add(Me.cmbFontAlignment, 1, 3)
+        Me.tblFontForm.Controls.Add(Me.lblFontvorschau, 1, 4)
+        Me.tblFontForm.Location = New System.Drawing.Point(6, 3)
+        Me.tblFontForm.Name = "tblFontForm"
+        Me.tblFontForm.RowCount = 5
+        Me.tblFontForm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tblFontForm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tblFontForm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33.0!))
+        Me.tblFontForm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
+        Me.tblFontForm.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.tblFontForm.Size = New System.Drawing.Size(366, 168)
+        Me.tblFontForm.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label2.Location = New System.Drawing.Point(3, 50)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 33)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Farbe:"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label3.Location = New System.Drawing.Point(3, 25)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 25)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Größe:"
         '
         'Label1
         '
@@ -355,29 +393,100 @@ Partial Class Optionen
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 24)
+        Me.Label1.Size = New System.Drawing.Size(52, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Schriftart:"
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label3.Location = New System.Drawing.Point(3, 24)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 24)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Größe:"
         '
         'cmbAvaibleFonts
         '
         Me.cmbAvaibleFonts.FormattingEnabled = True
-        Me.cmbAvaibleFonts.Location = New System.Drawing.Point(74, 3)
+        Me.cmbAvaibleFonts.Location = New System.Drawing.Point(81, 3)
         Me.cmbAvaibleFonts.Name = "cmbAvaibleFonts"
         Me.cmbAvaibleFonts.Size = New System.Drawing.Size(207, 21)
         Me.cmbAvaibleFonts.TabIndex = 3
+        '
+        'numFontSize
+        '
+        Me.numFontSize.Location = New System.Drawing.Point(81, 28)
+        Me.numFontSize.Name = "numFontSize"
+        Me.numFontSize.Size = New System.Drawing.Size(207, 20)
+        Me.numFontSize.TabIndex = 4
+        Me.numFontSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.pctFontColor)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lblFontRGB)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(81, 53)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(207, 21)
+        Me.FlowLayoutPanel1.TabIndex = 6
+        '
+        'pctFontColor
+        '
+        Me.pctFontColor.Location = New System.Drawing.Point(3, 3)
+        Me.pctFontColor.Name = "pctFontColor"
+        Me.pctFontColor.Size = New System.Drawing.Size(16, 16)
+        Me.pctFontColor.TabIndex = 0
+        '
+        'lblFontRGB
+        '
+        Me.lblFontRGB.AutoSize = True
+        Me.lblFontRGB.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblFontRGB.Location = New System.Drawing.Point(25, 0)
+        Me.lblFontRGB.Name = "lblFontRGB"
+        Me.lblFontRGB.Size = New System.Drawing.Size(36, 22)
+        Me.lblFontRGB.TabIndex = 1
+        Me.lblFontRGB.Text = "RGB: "
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label4.Location = New System.Drawing.Point(3, 83)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(69, 28)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Ausrichtung: "
+        '
+        'cmbFontAlignment
+        '
+        Me.cmbFontAlignment.FormattingEnabled = True
+        Me.cmbFontAlignment.Items.AddRange(New Object() {"Linksbündig", "Zentriert", "Rechtsbündig"})
+        Me.cmbFontAlignment.Location = New System.Drawing.Point(81, 86)
+        Me.cmbFontAlignment.Name = "cmbFontAlignment"
+        Me.cmbFontAlignment.Size = New System.Drawing.Size(207, 21)
+        Me.cmbFontAlignment.TabIndex = 8
+        '
+        'lblFontvorschau
+        '
+        Me.lblFontvorschau.AutoSize = True
+        Me.lblFontvorschau.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lblFontvorschau.Location = New System.Drawing.Point(81, 155)
+        Me.lblFontvorschau.Name = "lblFontvorschau"
+        Me.lblFontvorschau.Size = New System.Drawing.Size(282, 13)
+        Me.lblFontvorschau.TabIndex = 9
+        Me.lblFontvorschau.Text = "Test-Text"
+        '
+        'cmdCancel
+        '
+        Me.cmdCancel.Location = New System.Drawing.Point(382, 3)
+        Me.cmdCancel.Name = "cmdCancel"
+        Me.cmdCancel.Size = New System.Drawing.Size(75, 36)
+        Me.cmdCancel.TabIndex = 1
+        Me.cmdCancel.Text = "Abbrechen"
+        Me.cmdCancel.UseVisualStyleBackColor = True
+        '
+        'cmdSave
+        '
+        Me.cmdSave.Location = New System.Drawing.Point(463, 3)
+        Me.cmdSave.Name = "cmdSave"
+        Me.cmdSave.Size = New System.Drawing.Size(75, 36)
+        Me.cmdSave.TabIndex = 0
+        Me.cmdSave.Text = "Speichern"
+        Me.cmdSave.UseVisualStyleBackColor = True
         '
         'Optionen
         '
@@ -411,8 +520,11 @@ Partial Class Optionen
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.tblFontForm.ResumeLayout(False)
+        Me.tblFontForm.PerformLayout()
+        CType(Me.numFontSize, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -437,10 +549,19 @@ Partial Class Optionen
     Friend WithEvents lstFonts As System.Windows.Forms.ListBox
     Friend WithEvents SplitContainer3 As System.Windows.Forms.SplitContainer
     Friend WithEvents cmdDelete As System.Windows.Forms.Button
-    Friend WithEvents cmdSaveNew As System.Windows.Forms.Button
+    Friend WithEvents cmdSaveFont As System.Windows.Forms.Button
     Friend WithEvents txtFontName As System.Windows.Forms.TextBox
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents tblFontForm As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cmbAvaibleFonts As System.Windows.Forms.ComboBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents numFontSize As System.Windows.Forms.NumericUpDown
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents pctFontColor As System.Windows.Forms.Panel
+    Friend WithEvents lblFontRGB As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents cmbFontAlignment As System.Windows.Forms.ComboBox
+    Friend WithEvents lblFontvorschau As System.Windows.Forms.Label
+    Friend WithEvents cmdFontAdd As System.Windows.Forms.Button
 End Class

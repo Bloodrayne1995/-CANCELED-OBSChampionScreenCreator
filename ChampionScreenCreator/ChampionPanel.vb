@@ -55,9 +55,9 @@ Public Class ChampionPanel
         Dim lbl As New Label
         lbl.Text = champ.Name
         lbl.Width = Me.Width
-        lbl.Font = mem.fonts.getFontByID("ChampionFont")
-        lbl.ForeColor = mem.fonts.getColor("ChampionFont")
-        lbl.TextAlign = mem.fonts.getAlign("ChampionFont")
+        lbl.Font = mem.fonts.getFontByID(mem.outputSettings.settings("championFontName"))
+        lbl.ForeColor = mem.fonts.getColor(mem.outputSettings.settings("championFontName"))
+        lbl.TextAlign = mem.fonts.getAlign(mem.outputSettings.settings("championFontName"))
         lbl.BackColor = Color.Transparent
         lbl.Location = New Point(0, pctChamp.Height + 6)
 

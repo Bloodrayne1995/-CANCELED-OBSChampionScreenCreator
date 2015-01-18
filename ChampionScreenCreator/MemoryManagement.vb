@@ -163,6 +163,18 @@ Public Class MemoryManagement
         Public Function getFonts() As Dictionary(Of String, Font)
             Return fontdb
         End Function
+
+        Public Sub addNewFont(name As String)
+            fontdb.Add(name, New Font("Arial", 8))
+            font2align.Add(name, ContentAlignment.MiddleLeft)
+            font2color.Add(name, Color.Black)
+        End Sub
+
+        Public Sub removeByKey(key As String)
+            fontdb.Remove(key)
+            font2align.Remove(key)
+            font2color.Remove(key)
+        End Sub
     End Class
 
     Public Class OutputSettingDB

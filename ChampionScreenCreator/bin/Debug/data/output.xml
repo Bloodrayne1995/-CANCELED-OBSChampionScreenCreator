@@ -8,6 +8,7 @@
     <setting name="showSquareIcons" value="false" />
     <setting name="showBanner" value="true" />
     <setting name="backgroundImage" value=".\data\images\morgana_vs_ahri_2.jpg" />
+    <setting name="championFontName" value="ChampionFont" />
   </settings>
   <mainPanel>
     <team name="blau">
