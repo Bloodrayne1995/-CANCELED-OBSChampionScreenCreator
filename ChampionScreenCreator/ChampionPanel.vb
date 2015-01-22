@@ -55,13 +55,13 @@ Public Class ChampionPanel
         Dim lbl As New Label
         lbl.Text = champ.Name
         lbl.Width = Me.Width
-        lbl.Font = mem.fonts.getFontByID(mem.outputSettings.settings("championFontName"))
-        lbl.ForeColor = mem.fonts.getColor(mem.outputSettings.settings("championFontName"))
-        lbl.TextAlign = mem.fonts.getAlign(mem.outputSettings.settings("championFontName"))
+        lbl.Font = mem.fonts.getFontByID(mem.outputSettings.settings("championFontName").value)
+        lbl.ForeColor = mem.fonts.getColor(mem.outputSettings.settings("championFontName").value)
+        lbl.TextAlign = mem.fonts.getAlign(mem.outputSettings.settings("championFontName").value)
         lbl.BackColor = Color.Transparent
         lbl.Location = New Point(0, pctChamp.Height + 6)
 
-        If mem.outputSettings.settings("showChampionNames") = "true" Then
+        If mem.outputSettings.settings("showChampionNames").value = "true" Then
             Me.Controls.Add(lbl)
         End If
 

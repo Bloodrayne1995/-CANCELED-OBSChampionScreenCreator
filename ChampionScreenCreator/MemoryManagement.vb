@@ -178,7 +178,7 @@ Public Class MemoryManagement
     End Class
 
     Public Class OutputSettingDB
-        Public settings As New Dictionary(Of String, String)
+        Public settings As New Dictionary(Of String, Setting)
         Public team_blue As New List(Of Player)
         Public team_red As New List(Of Player)
         Public bans_blue As New List(Of Ban)
@@ -198,7 +198,10 @@ Public Class MemoryManagement
             For Each x As XmlNode In doc.ChildNodes(1).ChildNodes
                 If x.Name = "settings" Then
                     For Each a As XmlNode In x.ChildNodes
-                        settings.Add(a.Attributes("name").Value, a.Attributes("value").Value)
+                        Dim s As New Setting
+                        s.desc = a.Attributes("desc").Value
+                        s.value = a.Attributes("value").Value
+                        settings.Add(a.Attributes("name").Value, s)
                     Next
                 Else
                     For Each team As XmlNode In x.ChildNodes
@@ -282,7 +285,8 @@ Public Class MemoryManagement
                 For Each x As String In settings.Keys
                     .WriteStartElement("setting")
                     .WriteAttributeString("name", x)
-                    .WriteAttributeString("value", settings(x))
+                    .WriteAttributeString("value", settings(x).value)
+                    .WriteAttributeString("desc", settings(x).desc)
                     .WriteEndElement()
                 Next
                 .WriteEndElement()
@@ -420,6 +424,12 @@ Public Class MemoryManagement
                 Me.load(".\data\output.xml")
             End If
         End Sub
+
+
+        Public Class Setting
+            Public desc As String = ""
+            Public value As String = ""
+        End Class
 
     End Class
 End Class

@@ -30,6 +30,7 @@ Partial Class MainForm
         Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ZeigeTestImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlTeamBlue = New System.Windows.Forms.Panel()
         Me.grpBlauAufstellung = New System.Windows.Forms.GroupBox()
         Me.grpBlauTeam = New System.Windows.Forms.GroupBox()
@@ -42,7 +43,6 @@ Partial Class MainForm
         Me.cmdReset = New System.Windows.Forms.Button()
         Me.cmdOK = New System.Windows.Forms.Button()
         Me.cmdVorschau = New System.Windows.Forms.Button()
-        Me.SaveTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.pnlTeamBlue.SuspendLayout()
         Me.pnlTeamRed.SuspendLayout()
@@ -102,6 +102,12 @@ Partial Class MainForm
         Me.ZeigeTestImageToolStripMenuItem.Name = "ZeigeTestImageToolStripMenuItem"
         Me.ZeigeTestImageToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.ZeigeTestImageToolStripMenuItem.Text = "zeige Test Image"
+        '
+        'SaveTestToolStripMenuItem
+        '
+        Me.SaveTestToolStripMenuItem.Name = "SaveTestToolStripMenuItem"
+        Me.SaveTestToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.SaveTestToolStripMenuItem.Text = "save-Test"
         '
         'pnlTeamBlue
         '
@@ -239,12 +245,6 @@ Partial Class MainForm
         Me.cmdVorschau.TabIndex = 1
         Me.cmdVorschau.Text = "Vorschau"
         Me.cmdVorschau.UseVisualStyleBackColor = True
-        '
-        'SaveTestToolStripMenuItem
-        '
-        Me.SaveTestToolStripMenuItem.Name = "SaveTestToolStripMenuItem"
-        Me.SaveTestToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.SaveTestToolStripMenuItem.Text = "save-Test"
         '
         'MainForm
         '

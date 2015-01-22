@@ -149,11 +149,12 @@
         x.testImage()
     End Sub
 
-    Private Sub test(x As Panel)
+    Private Sub test(x As Bitmap)
         Dim a As New Form
-        a.Size = New Size(1920, 1080)
+        a.Size = New Size(1280, 720)
 
-        a.Controls.Add(x)
+        a.BackgroundImageLayout = ImageLayout.Stretch
+        a.BackgroundImage = x
         a.ShowDialog()
     End Sub
 
@@ -164,5 +165,17 @@
 
     Private Sub SaveTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveTestToolStripMenuItem.Click
         memory.outputSettings.save()
+    End Sub
+
+    Private Sub cmdVorschau_Click(sender As Object, e As EventArgs) Handles cmdVorschau.Click
+        Dim x As New ImageCreator(memory)
+        x.setBans("blau", ban_blau)
+        x.setBans("rot", ban_rot)
+
+        x.setTeam("blau", team_blau)
+        x.setTeam("rot", team_rot)
+
+        AddHandler x.on_image_created, AddressOf test
+        x.create(True)
     End Sub
 End Class

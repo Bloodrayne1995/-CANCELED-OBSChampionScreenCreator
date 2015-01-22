@@ -10,6 +10,29 @@
 
     Private _selected As Integer = -1
 
+
+#Region "Properties"
+
+    Public ReadOnly Property BAN1 As ChampionData
+        Get
+            Return _ban1
+        End Get
+    End Property
+
+    Public ReadOnly Property BAN2 As ChampionData
+        Get
+            Return _ban2
+        End Get
+    End Property
+
+    Public ReadOnly Property BAN3 As ChampionData
+        Get
+            Return _ban3
+        End Get
+    End Property
+
+#End Region
+
     Public Sub New(Optional farbe As String = "blau")
 
         InitializeComponent()
@@ -34,6 +57,9 @@
     Private Sub internalLade()
         setPanels()
     End Sub
+
+
+
 
 
     Private Sub setPanels()

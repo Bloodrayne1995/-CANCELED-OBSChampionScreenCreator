@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <output>
   <settings>
-    <setting name="showTeamLogos" value="false" />
-    <setting name="showTeamNames" value="false" />
-    <setting name="showPlayerNames" value="false" />
-    <setting name="showChampionNames" value="true" />
-    <setting name="showSquareIcons" value="false" />
-    <setting name="showBanner" value="true" />
-    <setting name="backgroundImage" value=".\data\images\morgana_vs_ahri_2.jpg" />
-    <setting name="championFontName" value="ChampionFont" />
+    <setting name="showTeamLogos" value="false" desc="Zeige Team-Logos"/>
+    <setting name="showTeamNames" value="false" desc="Zeige Team-Name"/>
+    <setting name="showPlayerNames" value="false" desc ="Zeige Spieler-Name"/>
+    <setting name="showChampionNames" value="true" desc="Zeige Champion-Name"/>
+    <setting name="showSquareIcons" value="false" desc="Zeige Champion-Icon"/>
+    <setting name="showBanner" value="true" desc="Zeige Champion-Banner"/>
+    <setting name="generateAutomatic" value="false" desc="Automatische Generierung"/>
+    <setting name="generateAutomaticInterval" value="-1" desc="Intervall der automatische Generierung"/>
+    <setting name="backgroundImage" value=".\data\images\morgana_vs_ahri_2.jpg" desc="Hintergund-Bild"/>
+    <setting name="championFontName" value="ChampionFont" desc="Schriftart für die Champion-Name"/>
   </settings>
   <mainPanel>
     <team name="blau">

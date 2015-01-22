@@ -1,24 +1,62 @@
 ﻿Public Class ImageCreator
 
     Private mem As MemoryManagement
-    Public Event on_image_created(pnl As Panel)
+    Public Event on_image_created(pnl As Bitmap)
 
-    'Zu Testzwecke:
+    'Blau
     Dim blau_top As ChampionData
     Dim blau_jng As ChampionData
     Dim blau_mid As ChampionData
     Dim blau_adc As ChampionData
     Dim blau_sup As ChampionData
 
+    Dim blau_b1 As ChampionData
+    Dim blau_b2 As ChampionData
+    Dim blau_b3 As ChampionData
+
+
+    'Rot
     Dim rot_top As ChampionData
     Dim rot_jng As ChampionData
     Dim rot_mid As ChampionData
     Dim rot_adc As ChampionData
     Dim rot_sup As ChampionData
 
+    Dim rot_b1 As ChampionData
+    Dim rot_b2 As ChampionData
+    Dim rot_b3 As ChampionData
+
 
     Public Sub New(ByRef memor As MemoryManagement)
         mem = memor
+    End Sub
+
+    Public Sub setTeam(name As String, ByRef team As TeamPanel)
+        If name = "blau" Then
+            blau_top = team.TOPLane
+            blau_adc = team.CARRY
+            blau_sup = team.SUPPORT
+            blau_mid = team.MID
+            blau_jng = team.JUNGLE
+        Else
+            rot_top = team.TOPLane
+            rot_adc = team.CARRY
+            rot_sup = team.SUPPORT
+            rot_mid = team.MID
+            rot_jng = team.JUNGLE
+        End If
+    End Sub
+
+    Public Sub setBans(name As String, ByRef ban As BanPanel)
+        If name = "blau" Then
+            blau_b1 = ban.BAN1
+            blau_b2 = ban.BAN2
+            blau_b3 = ban.BAN3
+        Else
+            rot_b1 = ban.BAN1
+            rot_b2 = ban.BAN2
+            rot_b3 = ban.BAN3
+        End If
     End Sub
 
     Public Sub testImage()
@@ -52,9 +90,9 @@
         Dim mainP As New Panel
         mainP.Size = New Size(1920, 1080)
         mainP.BackgroundImageLayout = ImageLayout.Stretch
-        mainP.BackgroundImage = Image.FromFile(mem.outputSettings.settings("backgroundImage"))
+        mainP.BackgroundImage = Image.FromFile(mem.outputSettings.settings("backgroundImage").value)
 
-        If mem.outputSettings.settings("showBanner") = "true" Then
+        If mem.outputSettings.settings("showBanner").value = "true" Then
             'Team-Blau:
             mainP.Controls.Add(getChampionPanel(blau_top, "blau", "top"))
             mainP.Controls.Add(getChampionPanel(blau_jng, "blau", "jungle"))
@@ -71,7 +109,12 @@
             mainP.Controls.Add(getChampionPanel(rot_sup, "rot", "support"))
         End If
 
-        RaiseEvent on_image_created(mainP)
+        Dim bild As New Bitmap(1920, 1080, Imaging.PixelFormat.Format48bppRgb)
+        mainP.DrawToBitmap(bild, New Rectangle(0, 0, 1920, 1080))
+
+
+
+        RaiseEvent on_image_created(bild)
     End Sub
 
 

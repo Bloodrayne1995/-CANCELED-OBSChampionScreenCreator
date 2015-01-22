@@ -19,17 +19,11 @@
 
     Private Sub lade()
         'Checkboxen:
-        For Each x As CheckBox In grpOutputSettings.Controls
-            If memory.outputSettings.settings(x.Tag) = "true" Then
-                x.Checked = True
-            Else
-                x.Checked = False
-            End If
-        Next
+        ladeCheckboxen()
 
 
         'Hintergrund
-        Dim backp As New IO.FileInfo(memory.outputSettings.settings("backgroundImage"))
+        Dim backp As New IO.FileInfo(memory.outputSettings.settings("backgroundImage").value)
         txtBackgroundPath.Text = backp.FullName
         pctBackground.BackgroundImageLayout = ImageLayout.Stretch
         pctBackground.BackgroundImage = Image.FromFile(backp.FullName)
@@ -45,14 +39,14 @@
 
     Public Sub save() Handles cmdSave.Click
         'Ausgabe-Settings
-        For Each chk As CheckBox In grpOutputSettings.Controls
+        For Each chk As CheckBox In flpSettings.Controls
             If (chk.Checked) Then
-                memory.outputSettings.settings(chk.Tag) = "true"
+                memory.outputSettings.settings(chk.Tag).value = "true"
             Else
-                memory.outputSettings.settings(chk.Tag) = "false"
+                memory.outputSettings.settings(chk.Tag).value = "false"
             End If
         Next
-        memory.outputSettings.settings("backgroundImage") = txtBackgroundPath.Text
+        memory.outputSettings.settings("backgroundImage").value = txtBackgroundPath.Text
 
 
         memory.outputSettings.save()
@@ -227,4 +221,32 @@
 
         ladeFonts()
     End Sub
+
+    Private Sub save(sender As Object, e As EventArgs) Handles cmdSave.Click
+
+    End Sub
+
+
+    Private Sub ladeCheckboxen()
+        Dim index As Integer = 0
+        For Each k As String In memory.outputSettings.settings.Keys
+            If memory.outputSettings.settings(k).value = "true" Or memory.outputSettings.settings(k).value = "false" Then
+                Dim chk As New CheckBox
+                chk.Tag = k
+                chk.Text = memory.outputSettings.settings(k).desc
+
+                If (memory.outputSettings.settings(k).value = "true") Then
+                    chk.Checked = True
+                Else
+                    chk.Checked = False
+                End If
+
+                chk.AutoSize = True
+                flpSettings.Controls.Add(chk)
+            End If
+        Next
+    End Sub
+
+
+
 End Class
