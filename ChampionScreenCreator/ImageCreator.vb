@@ -110,6 +110,23 @@
             mainP.Controls.Add(getChampionPanel(rot_sup, "rot", "support"))
         End If
 
+        If mem.outputSettings.settings("showSquareIcons").value = "true" Then
+            'Team Blau
+            mainP.Controls.Add(getChampionSquare(blau_top, "blau", "top"))
+            mainP.Controls.Add(getChampionSquare(blau_jng, "blau", "jungle"))
+            mainP.Controls.Add(getChampionSquare(blau_mid, "blau", "mid"))
+            mainP.Controls.Add(getChampionSquare(blau_adc, "blau", "adc"))
+            mainP.Controls.Add(getChampionSquare(blau_sup, "blau", "support"))
+
+            'Team Rot
+            mainP.Controls.Add(getChampionSquare(rot_top, "rot", "top"))
+            mainP.Controls.Add(getChampionSquare(rot_jng, "rot", "jungle"))
+            mainP.Controls.Add(getChampionSquare(rot_mid, "rot", "mid"))
+            mainP.Controls.Add(getChampionSquare(rot_adc, "rot", "adc"))
+            mainP.Controls.Add(getChampionSquare(rot_sup, "rot", "support"))
+        End If
+
+
         Dim bild As New Bitmap(1920, 1080, Imaging.PixelFormat.Format48bppRgb)
         mainP.DrawToBitmap(bild, New Rectangle(0, 0, 1920, 1080))
 
@@ -129,6 +146,16 @@
         x.Size = plDat.BANNER_Size
         x.Location = plDat.BANNER
 
+        Return x
+    End Function
+
+
+    Private Function getChampionSquare(ByRef chd As ChampionData, farbe As String, rolle As String) As PictureBox
+        Dim x As New PictureBox
+        x.BackgroundImageLayout = ImageLayout.Stretch
+        x.Size = mem.outputSettings.getPlayer(farbe, rolle).SQUARE_Size
+        x.Location = mem.outputSettings.getPlayer(farbe, rolle).SQUARE
+        x.BackgroundImage = chd.Square
         Return x
     End Function
 

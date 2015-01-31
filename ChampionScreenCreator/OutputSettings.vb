@@ -243,4 +243,20 @@
             pctWallPaper.BackgroundImage = Image.FromFile(txtBildPath.Text)
         End If
     End Sub
+
+    Private Sub cmdOK_Click(sender As Object, e As EventArgs) Handles cmdOK.Click
+        'Checkboxen
+        For Each x As CheckBox In flpFlags.Controls
+            If x.Checked Then
+                db.outputSettings.settings(x.Tag).value = "true"
+            Else
+                db.outputSettings.settings(x.Tag).value = "false"
+            End If
+        Next
+
+        'Hintergrund-Bild
+        db.outputSettings.settings("backgroundImage").value = txtBildPath.Text
+
+        prev.testImage()
+    End Sub
 End Class
