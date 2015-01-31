@@ -31,6 +31,7 @@
         mem = memor
     End Sub
 
+
     Public Sub setTeam(name As String, ByRef team As TeamPanel)
         If name = "blau" Then
             blau_top = team.TOPLane

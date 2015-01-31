@@ -93,14 +93,14 @@
             ElseIf _selectedTeam = "blau" Then
                 team_blau.setChampion(memory.championDB.getByName(champName))
             End If
-            banSelector.removeChampionByName(champName)
+            banSelector.hideRowByName(champName)
         Else
             If _selectedTeam = "ban_rot" Then
                 ban_rot.setChampion(memory.championDB.getByName(champName))
             ElseIf _selectedTeam = "ban_blau" Then
                 ban_blau.setChampion(memory.championDB.getByName(champName))
             End If
-            champSelector.removeChampionByName(champName)
+            champSelector.hideRowByName(champName)
         End If
     End Sub
 
@@ -158,10 +158,6 @@
         a.ShowDialog()
     End Sub
 
-    Private Sub OptionenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionenToolStripMenuItem.Click
-        Dim x As New Optionen(memory)
-        x.ShowDialog()
-    End Sub
 
     Private Sub SaveTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveTestToolStripMenuItem.Click
         memory.outputSettings.save()
@@ -177,5 +173,11 @@
 
         AddHandler x.on_image_created, AddressOf test
         x.create(True)
+    End Sub
+
+    Private Sub AusgabeOptionenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AusgabeOptionenToolStripMenuItem.Click
+        Dim x As New OutputSettings(memory)
+        x.ShowDialog()
+
     End Sub
 End Class

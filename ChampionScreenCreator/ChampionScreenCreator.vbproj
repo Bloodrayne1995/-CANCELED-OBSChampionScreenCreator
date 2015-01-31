@@ -122,10 +122,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Optionen.Designer.vb">
-      <DependentUpon>Optionen.vb</DependentUpon>
+    <Compile Include="OutputSettings.Designer.vb">
+      <DependentUpon>OutputSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="Optionen.vb">
+    <Compile Include="OutputSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Player.vb" />
@@ -161,8 +161,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Optionen.resx">
-      <DependentUpon>Optionen.vb</DependentUpon>
+    <EmbeddedResource Include="OutputSettings.resx">
+      <DependentUpon>OutputSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
@@ -960,6 +960,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+    <Folder Include="data\customOutputSettings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

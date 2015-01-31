@@ -32,7 +32,7 @@ Public Class MemoryManagement
         
         'Ausgabe-Optionen
         schritt("Lade Ausgabe-Optionen")
-        outputSettings.load(".\data\output.xml")
+        outputSettings.load(My.Settings.outputSettingFile)
 
         schritt("Laden komplett. Starte Haupt-Fenster")
         RaiseEvent finished()
@@ -270,8 +270,77 @@ Public Class MemoryManagement
             Return erg
         End Function
 
-        Public Sub save(Optional loadAfterSave As Boolean = True)
-            Dim writer As New XmlTextWriter(".\data\output.xml", System.Text.Encoding.UTF8)
+
+        Public Sub setPlayer(farbe As String, rolle As String, was As String, wasDavon As String, neuerWert As Object)
+            Dim pos As Integer = -1
+            If farbe = "blau" Then
+                For i As Integer = 0 To team_blue.Count - 1
+                    If team_blue(i).ROLLE.ToLower = rolle.ToLower Then
+                        pos = i
+                        Exit For
+                    End If
+                Next
+                If was = "banner" Then
+                    If wasDavon = "pos" Then
+                        team_blue(pos).BANNER = DirectCast(neuerWert, Point)
+                        Exit Sub
+                    End If
+                    If wasDavon = "size" Then
+                        team_blue(pos).BANNER_Size = DirectCast(neuerWert, Size)
+                        Exit Sub
+                    End If
+                End If
+            Else
+                For i As Integer = 0 To team_red.Count - 1
+                    If team_red(i).ROLLE.ToLower = rolle.ToLower Then
+                        pos = i
+                        Exit For
+                    End If
+                Next
+                If was = "banner" Then
+                    If wasDavon = "pos" Then
+                        team_red(pos).BANNER = DirectCast(neuerWert, Point)
+                        Exit Sub
+                    End If
+                    If wasDavon = "size" Then
+                        team_red(pos).BANNER_Size = DirectCast(neuerWert, Size)
+                        Exit Sub
+                    End If
+                End If
+            End If
+
+           
+        End Sub
+
+        Public Function getBanIndex(farbe As String, row As Integer) As Integer
+            Dim pos As Integer = -1
+
+            If farbe = "blau" Then
+                For i As Integer = 0 To bans_blue.Count - 1
+                    If bans_blue(i).INDEX = row Then
+                        pos = i
+                        Exit For
+                    End If
+                Next
+            Else
+                For i As Integer = 0 To bans_red.Count - 1
+                    If bans_red(i).INDEX = row Then
+                        pos = i
+                        Exit For
+                    End If
+                Next
+            End If
+            Return pos
+        End Function
+
+        Public Sub save(Optional loadAfterSave As Boolean = True, Optional saveAS As String = "-1")
+            Dim writer As XmlTextWriter
+            If saveAS = "-1" Then
+                writer = New XmlTextWriter(".\data\output.xml", System.Text.Encoding.UTF8)
+            Else
+                writer = New XmlTextWriter(".\data\customOutputSettings\" & saveAS & ".xml", System.Text.Encoding.UTF8)
+            End If
+
             With writer
                 .Formatting = Formatting.Indented
                 .Indentation = 4

@@ -26,12 +26,13 @@ Partial Class ChampionSelector
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.txtSuche = New System.Windows.Forms.TextBox()
         Me.cmdOK = New System.Windows.Forms.Button()
-        Me.lstChampions = New System.Windows.Forms.ListView()
+        Me.drgChampions = New System.Windows.Forms.DataGridView()
         Me.icons = New System.Windows.Forms.ImageList(Me.components)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.drgChampions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -48,7 +49,7 @@ Partial Class ChampionSelector
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.lstChampions)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.drgChampions)
         Me.SplitContainer1.Size = New System.Drawing.Size(528, 451)
         Me.SplitContainer1.SplitterDistance = 32
         Me.SplitContainer1.TabIndex = 0
@@ -71,16 +72,22 @@ Partial Class ChampionSelector
         Me.cmdOK.Text = "Setzen"
         Me.cmdOK.UseVisualStyleBackColor = True
         '
-        'lstChampions
+        'drgChampions
         '
-        Me.lstChampions.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lstChampions.LargeImageList = Me.icons
-        Me.lstChampions.Location = New System.Drawing.Point(0, 0)
-        Me.lstChampions.MultiSelect = False
-        Me.lstChampions.Name = "lstChampions"
-        Me.lstChampions.Size = New System.Drawing.Size(528, 415)
-        Me.lstChampions.TabIndex = 0
-        Me.lstChampions.UseCompatibleStateImageBehavior = False
+        Me.drgChampions.AllowUserToAddRows = False
+        Me.drgChampions.AllowUserToDeleteRows = False
+        Me.drgChampions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.drgChampions.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.drgChampions.Location = New System.Drawing.Point(0, 0)
+        Me.drgChampions.MultiSelect = False
+        Me.drgChampions.Name = "drgChampions"
+        Me.drgChampions.ReadOnly = True
+        Me.drgChampions.RowHeadersWidth = 32
+        Me.drgChampions.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.drgChampions.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.drgChampions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.drgChampions.Size = New System.Drawing.Size(528, 415)
+        Me.drgChampions.TabIndex = 0
         '
         'icons
         '
@@ -100,13 +107,14 @@ Partial Class ChampionSelector
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.drgChampions, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents txtSuche As System.Windows.Forms.TextBox
     Friend WithEvents cmdOK As System.Windows.Forms.Button
-    Friend WithEvents lstChampions As System.Windows.Forms.ListView
     Friend WithEvents icons As System.Windows.Forms.ImageList
+    Friend WithEvents drgChampions As System.Windows.Forms.DataGridView
 
 End Class

@@ -24,13 +24,14 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.DateiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OptionenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BeendenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ZeigeTestImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AusgabeOptionenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SchriftartenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlTeamBlue = New System.Windows.Forms.Panel()
         Me.grpBlauAufstellung = New System.Windows.Forms.GroupBox()
         Me.grpBlauTeam = New System.Windows.Forms.GroupBox()
@@ -53,7 +54,7 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.ToolStripComboBox1, Me.ToolStripMenuItem1})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.OptionenToolStripMenuItem1, Me.ToolStripComboBox1, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1079, 27)
@@ -62,26 +63,15 @@ Partial Class MainForm
         '
         'DateiToolStripMenuItem
         '
-        Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionenToolStripMenuItem, Me.ToolStripSeparator1, Me.BeendenToolStripMenuItem})
+        Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BeendenToolStripMenuItem})
         Me.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem"
         Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 23)
         Me.DateiToolStripMenuItem.Text = "Datei"
         '
-        'OptionenToolStripMenuItem
-        '
-        Me.OptionenToolStripMenuItem.Name = "OptionenToolStripMenuItem"
-        Me.OptionenToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.OptionenToolStripMenuItem.Text = "Optionen"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(121, 6)
-        '
         'BeendenToolStripMenuItem
         '
         Me.BeendenToolStripMenuItem.Name = "BeendenToolStripMenuItem"
-        Me.BeendenToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.BeendenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BeendenToolStripMenuItem.Text = "Beenden"
         '
         'ToolStripComboBox1
@@ -108,6 +98,25 @@ Partial Class MainForm
         Me.SaveTestToolStripMenuItem.Name = "SaveTestToolStripMenuItem"
         Me.SaveTestToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.SaveTestToolStripMenuItem.Text = "save-Test"
+        '
+        'OptionenToolStripMenuItem1
+        '
+        Me.OptionenToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AusgabeOptionenToolStripMenuItem, Me.SchriftartenToolStripMenuItem})
+        Me.OptionenToolStripMenuItem1.Name = "OptionenToolStripMenuItem1"
+        Me.OptionenToolStripMenuItem1.Size = New System.Drawing.Size(69, 23)
+        Me.OptionenToolStripMenuItem1.Text = "Optionen"
+        '
+        'AusgabeOptionenToolStripMenuItem
+        '
+        Me.AusgabeOptionenToolStripMenuItem.Name = "AusgabeOptionenToolStripMenuItem"
+        Me.AusgabeOptionenToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.AusgabeOptionenToolStripMenuItem.Text = "Ausgabe-Optionen"
+        '
+        'SchriftartenToolStripMenuItem
+        '
+        Me.SchriftartenToolStripMenuItem.Name = "SchriftartenToolStripMenuItem"
+        Me.SchriftartenToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.SchriftartenToolStripMenuItem.Text = "Schriftarten"
         '
         'pnlTeamBlue
         '
@@ -273,8 +282,6 @@ Partial Class MainForm
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents DateiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents OptionenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BeendenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripComboBox1 As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents pnlTeamBlue As System.Windows.Forms.Panel
@@ -292,4 +299,7 @@ Partial Class MainForm
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ZeigeTestImageToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SaveTestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OptionenToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AusgabeOptionenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SchriftartenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
