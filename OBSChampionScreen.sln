@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChampionScreenCreator", "ChampionScreenCreator\ChampionScreenCreator.vbproj", "{5C881ECA-8EBC-4EE2-8624-28C76FB4F8CB}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CSC", "CSC\CSC.vbproj", "{29D000E8-88E7-4F8D-9F1E-F7351C1DDAB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{5C881ECA-8EBC-4EE2-8624-28C76FB4F8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C881ECA-8EBC-4EE2-8624-28C76FB4F8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C881ECA-8EBC-4EE2-8624-28C76FB4F8CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D000E8-88E7-4F8D-9F1E-F7351C1DDAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D000E8-88E7-4F8D-9F1E-F7351C1DDAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D000E8-88E7-4F8D-9F1E-F7351C1DDAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D000E8-88E7-4F8D-9F1E-F7351C1DDAB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

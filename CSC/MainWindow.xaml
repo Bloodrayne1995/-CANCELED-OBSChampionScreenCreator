@@ -1,0 +1,6 @@
+﻿<Window x:Name="frm_Main" x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Champion Screen Creator" Height="720" Width="1280">
+    <Grid x:Name="grdMain"/>
+</Window>

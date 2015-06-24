@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<output>
+  <settings>
+    <setting name="showTeamLogos" value="false" desc="Zeige Team-Logos"/>
+    <setting name="showTeamNames" value="false" desc="Zeige Team-Name"/>
+    <setting name="showPlayerNames" value="false" desc ="Zeige Spieler-Name"/>
+    <setting name="showChampionNames" value="true" desc="Zeige Champion-Name"/>
+    <setting name="showSquareIcons" value="false" desc="Zeige Champion-Icon"/>
+    <setting name="showBanner" value="true" desc="Zeige Champion-Banner"/>
+    <setting name="showBans" value="true" desc="Zeige Banns" />
+    <setting name="generateAutomatic" value="false" desc="Automatische Generierung"/>
+    <setting name="generateAutomaticInterval" value="-1" desc="Intervall der automatische Generierung"/>
+    <setting name="backgroundImage" value=".\data\images\morgana_vs_ahri_2.jpg" desc="Hintergund-Bild"/>
+    <setting name="championFontName" value="ChampionFont" desc="Schriftart für die Champion-Name"/>
+  </settings>
+  <mainPanel>
+    <team name="blau">
+      <bans>
+        <ban row="0" x="10" y ="0" />
+        <ban row="1" x="10" y ="125" />
+        <ban row="2" x="10" y ="250" />
+      </bans>
+      <player role="top">
+        <banner>
+          <location x="51" y="30" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="jungle">
+        <banner>
+          <location x="51" y="622" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="mid">
+        <banner>
+          <location x="291" y="319" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="adc">
+        <banner>
+          <location x="550" y="30" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="support">
+        <banner>
+          <location x="550" y="622" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+    </team>
+    <team name="rot">
+      <bans>
+        <ban row="0" x="1790" y ="0" />
+        <ban row="1" x="1790" y ="125" />
+        <ban row="2" x="1790" y ="250" />
+      </bans>
+      <player role="top">
+        <banner>
+          <location x="1679" y="30" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="jungle">
+        <banner>
+          <location x="1679" y="622" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="mid">
+        <banner>
+          <location x="1406" y="319" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="adc">
+        <banner>
+          <location x="1148" y="30" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+      <player role="support">
+        <banner>
+          <location x="1148" y="622" />
+          <size width="225" height="418" />
+        </banner>
+        <square>
+          <location x="0" y="0" />
+          <size width="64" height="64" />
+        </square>
+      </player>
+    </team>
+  </mainPanel>
+
+</output>
